@@ -1,0 +1,207 @@
+/* Ajuste de box-sizing y fuente predeterminada para todos los elementos */
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    margin: 0;
+    background-color: #f4f4f4; /* Color de fondo claro */
+}
+
+/* Contenedor principal que distribuye las secciones */
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos de la sección izquierda (título y botón de nuevo juego) */
+.contIzq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 10%;
+}
+
+.contIzq h1 {
+    color: rgb(255, 115, 0); /* Color naranja */
+    margin-bottom: 40px;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra para el texto */
+    margin-left: 40px;
+}
+
+/* Botón de "New Game" con estilo y efectos */
+.newgame {
+    background-color: #4CAF50; /* Verde inicial */
+    border: none;
+    color: white;
+    padding: 20px 40px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 28px; 
+    margin: 4px 20px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s; /* Efecto de transición al cambiar el color */
+}
+
+/* Cambio de color cuando el ratón pasa sobre el botón */
+.newgame:hover {
+    background-color: #3d8b41; /* Verde oscuro */
+}
+
+/* Contenedor central para la tabla */
+.contCent {
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse; /* Sin espacio entre celdas */
+}
+
+/* Estilos para las celdas de la tabla */
+td {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid black;
+}
+
+/* Colores de fondo para las celdas */
+.yellow {
+    background-color: yellow;
+    color: gray;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.red {
+    background-color: red;
+}
+
+/* Sección derecha que contiene los controles y botones */
+.contDer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10%;
+}
+
+/* Contenedor para el texto y el input de movimiento */
+.contMover {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los campos de entrada de texto */
+input {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 18px;
+    width: 50px;
+    height: 40px;
+}
+
+/* Estilos específicos para el input de movimiento */
+#moveInput {
+    font-size: 20px;
+    padding: 10px;
+    width: 50px;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    outline: none;
+    height: 40px;
+}
+
+/* Contenedor para los controles de flechas */
+.controles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor para las flechas izquierda y derecha */
+.flechaIzqDer {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo de los botones de flecha */
+.flecha {
+    width: 50px; /* Ancho reducido para los botones de dirección */
+    font-size: 20px; /* Tamaño del símbolo de la flecha */
+    padding: 10px 15px;
+    margin: 5px;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Efecto de transición */
+    height: 60px; /* Altura fija */
+}
+
+/* Espacio entre las flechas izquierda y derecha */
+.espacio {
+    width: 40px;
+    height: 50px;
+}
+
+/* Botón de "Crush Once" con estilo */
+.botonCrush {
+    background-color: #FF5733; /* Color inicial */
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+/* Cambio de color cuando el ratón pasa sobre el botón */
+.botonCrush:hover {
+    background-color: #C70039; /* Rojo oscuro */
+}

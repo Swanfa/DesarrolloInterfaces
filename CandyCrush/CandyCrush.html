@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuración de metadatos del documento -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres en UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escala la página para que sea responsive -->
+    <title>Candy Crush Web</title> <!-- Título de la página web -->
+    <link rel="stylesheet" href="CandyCrushCss.css"> <!-- Enlace a la hoja de estilos CSS externa -->
+</head>
+
+<body>
+    <!-- Contenedor principal de toda la estructura del juego -->
+    <div class="contenedor">
+        
+        <!-- Sección izquierda con título y botón de "New Game" -->
+        <div class="contIzq">
+            <h1>Candy <br> Crush</h1> <!-- Título del juego con salto de línea -->
+            <button class="newgame" type="button" value="newgame" onclick="newgame()">New Game</button>
+            <!-- Botón que inicia una nueva partida al llamar a la función JavaScript `newgame()` -->
+        </div>
+
+        <!-- Sección central donde se muestra la tabla del juego -->
+        <div class="contCent">
+            <table id="tabla"></table> <!-- Tabla que contendrá los elementos del juego, asignada con el id "tabla" -->
+        </div>
+
+        <!-- Sección derecha con controles de movimiento y botón para realizar la acción "Crush" -->
+        <div class="contDer">
+            
+            <!-- Contenedor para mostrar y controlar los movimientos -->
+            <div class="contMover">
+                <label for="contMover-input" id="moveInput">Move:</label> <!-- Etiqueta para los movimientos -->
+                <input id="contDer-input" type="text" onchange="validateMove()"> <!-- Campo de texto para movimientos, llama a `validateMove()` cuando se cambia -->
+            </div>
+
+            <!-- Controles de dirección (arriba, abajo, izquierda, derecha) -->
+            <div class="controles">
+                <button class="flecha arriba" id="flechaArriba" onclick="arriba()">&uarr;</button> <!-- Botón flecha arriba, llama a `arriba()` -->
+                
+                <div class="flechaIzqDer">
+                    <button class="flecha Izq" id="felchaIzq" onclick="izquierda()">&larr;</button> <!-- Flecha izquierda -->
+                    <div class="espacio"></div> <!-- Espacio entre flechas izquierda y derecha -->
+                    <button class="flecha Der" id="flechaDer" onclick="derecha()">&rarr;</button> <!-- Flecha derecha -->
+                </div>
+                <button class="flecha abajo" id="flechaAbajo" onclick="abajo()">&darr;</button> <!-- Flecha abajo, llama a `abajo()` -->
+            </div>
+
+            <!-- Botón para activar la acción "Crush Once" -->
+            <button class="botonCrush">Crush Once</button> <!-- Botón para ejecutar una acción en el juego -->
+        </div>
+    </div>
+    <!-- Enlace al archivo JavaScript externo donde están las funciones del juego -->
+    <script src="JSCandyCrush.js"></script>
+</body>
+
+</html>
